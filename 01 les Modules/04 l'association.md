@@ -18,5 +18,6 @@ On parle alors sous partie.
 ## L'association
 Une relation d'association entre deux classes.
 On peut dire que une classe possède un ou des objets.
-<img src="../img/association/04-assotiation" width="300">
+  
+<img src="../img/association/04-association" width="400">
 
