@@ -19,5 +19,5 @@ On parle alors sous partie.
 Une relation d'association entre deux classes.
 On peut dire que une classe possède un ou des objets.
   
-<img src="../img/association/04-association" width="400">
+<img src="../img/association/04-association.png" width="400">
 
