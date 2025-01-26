@@ -1,7 +1,7 @@
 #  Association / Aggregation / Composition
 Les relations entre les classes
   
-Quand on commence la programmation orienté objet  
+Quand on commence la programmation orienté objet : **POO**   
 Il est difficile de choisir en une associtaion (Association / Aggregation / Composition) ou un héritage.
 
 ## La composition
@@ -33,3 +33,49 @@ L'attribut <code>categorie</code> apparait sur la flèche.
 Il n'apparait pas dans la liste des attributs.  
 Il est possible d'ecrire les cardinalités.    
 En fonction des cardinalité on saura si c'est un objet ou un tableau d'objet.
+**Categorie.php**
+```php
+<?php
+namespace Classes;
+class Categorie{
+    private ?String $nom = null;
+    public function __construct(String $nom){
+        $this->nom = $nom;
+    }
+
+}
+```
+
+**Film.php**
+```php
+<?php
+namespace Classes;
+
+use Classes\categorie; 
+class Film{
+    private ?String $titre = null;
+    private ?String $annne = null;
+    private ?Categorie $categorie = null;
+    public function __construct(String $titre,String $annne,Categorie $categorie){
+        $this->titre = $titre;
+        $this->annne = $annne;
+        $this->categorie = $categorie;  
+    }
+
+}
+```
+
+**test3.php**
+```php
+<?php
+require_once('./config/config.php');
+require_once(VENDOR_ROOT.'/autoload.php');
+
+use Classes\Categorie;
+use Classes\Film;
+
+$categ = new Categorie('SF');
+$film = new Film('Interstellar',2014,$categ);
+var_dump($film);
+```
+
