@@ -1,5 +1,5 @@
 
-
+Voici une exemple d'autoload classique
 ```php
 spl_autoload_register(function ($class_name) {
     include_once './classes/'.$class_name . '.php';
@@ -32,9 +32,19 @@ pourquoi ?
     |-- classes
         |-- Personne.php
     |-- composer.json
+    |-- test.php
 ```
 
-création du fichier <code>Personne.php</code>
+Création du fichier <code>config.php</code>
+```php
+<?php
+define ('PROJET_ROOT', $_SERVER['DOCUMENT_ROOT'].'/projet-classes');  
+define ('VENDOR_ROOT', PROJET_ROOT.'/vendor');
+
+```
+
+
+Création du fichier <code>Personne.php</code>
 ```php
 <?php
 namespace Classes;
