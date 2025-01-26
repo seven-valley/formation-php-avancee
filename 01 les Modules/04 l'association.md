@@ -1,4 +1,8 @@
 #  Association / Aggregation / Composition
+Les relations entre les classes
+  
+Quand on commence la programmation orienté objet  
+Il est difficile de choisir en une associtaion (Association / Aggregation / Composition) ou un héritage.
 
 ## La composition
 
