@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>290</x>
+      <y>60</y>
+      <w>300</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>Rallye
+--
+-date: Date
+-pays: String
+-specialeIndex: int = 0
+--
++Rallye(pays: String, date: Date)
+--
++ajouterSpeciale(speciale: Speciale)
++infosRallye(inclureSpeciales: Boolean): String
++getSpeciale(nom: String): Speciale
++getClassementGeneral(): Classement[]
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>850</x>
+      <y>60</y>
+      <w>570</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>Speciale
+--
+-jour_heure: Date
+-distance: double
+-nom: String
+-resultatIndex: int = 0
+--
++Speciale(nom: String, aLieuLe: Date, distance: double, type: TypeEpreuve)
+--
++getNom(): String
+--
++getClassement(): Resultat[]
++ajouterResultat(resultat: Resultat)
++infosSpeciale(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>580</x>
+      <y>80</y>
+      <w>290</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+r2=speciales
+m2=0..20
+
+</panel_attributes>
+    <additional_attributes>10.0;20.0;270.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>600</x>
+      <y>580</y>
+      <w>540</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Equipage
+--
+-dossard: int
+--
++Equipage(nomPilote: String, prenomPilote: String, nationalitePilote: String,
+nomCoPilote: String, prenomCoPilote: String, nationaliteCoPilote: String, dossard: int)
+--
++getDossard(): int
+--
++infosEquipage(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1280</x>
+      <y>580</y>
+      <w>210</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Concurrent
+--
+-nom: String
+-prenom: String
+-nationalite: String
+--
++Concurrent(nom: String, prenom: String, nationalite: String)
+--
++infosConcurrent(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1130</x>
+      <y>600</y>
+      <w>170</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
+r2=pilote
+m2=1
+
+</panel_attributes>
+    <additional_attributes>10.0;20.0;150.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1130</x>
+      <y>650</y>
+      <w>170</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
+r2=copilote
+m2=1
+
+</panel_attributes>
+    <additional_attributes>10.0;20.0;150.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>60</x>
+      <y>540</y>
+      <w>400</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Equipe
+--
+-nom: String
+-nationalité: String
+-constructeur: Boolean
+-equipageIndex: int = 0
+--
++Equipe(nom: String, nationalite: String, constructeur: Boolean)
+--
++ajouterEquipage(equipage: Equipage)
++infosEquipe(): String
++getEquipage(dossard: int): Equipage</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>450</x>
+      <y>580</y>
+      <w>170</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..3
+r1=equipages</panel_attributes>
+    <additional_attributes>150.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>880</x>
+      <y>380</y>
+      <w>420</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Resultat
+--
+-temps: Date
+--
++Resultat(equipage: Equipage, speciale: Speciale, temps: Date)
+--
++getTemps(): Date
++getEquipage(): Equipage
++getSpeciale(): Speciale
+--
++infosResultat(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>970</x>
+      <y>260</y>
+      <w>130</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..50
+r2=resultats {sorted}
+r1=speciale</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>970</x>
+      <y>510</y>
+      <w>90</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m2=1
+r2=equipage</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>620</x>
+      <y>210</y>
+      <w>120</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+Type_Epreuve
+--
+Qualif
+Speciale
+Liaison</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>730</x>
+      <y>210</y>
+      <w>140</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+r1=typeEpreuve</panel_attributes>
+    <additional_attributes>10.0;20.0;120.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>450</x>
+      <y>350</y>
+      <w>390</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>ClassementUtil
+--
+_+classerParTemps(Resultat[] resultats): Resultats[]_
+_+classerParTemps(Classement[] classements): Classement[]_
+_+classerParEquipage(Resultat[] resultats): Resultats[]_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>830</x>
+      <y>390</y>
+      <w>70</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>50.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1300</x>
+      <y>300</y>
+      <w>140</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>bg=yellow
+Un seul résultat par Speciale et par équipage</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>350</y>
+      <w>410</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Classement
+--
+-cumulTemps: Date
+--
++Classement(equipage: Equipage, cumulTemps: Date)
+--
++getCumulTemps(): Date
++infosClassement(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>510</x>
+      <y>230</y>
+      <w>30</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>770</x>
+      <y>250</y>
+      <w>100</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>260</x>
+      <y>460</y>
+      <w>460</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+r1=equipage</panel_attributes>
+    <additional_attributes>380.0;120.0;380.0;40.0;10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>340</x>
+      <y>230</y>
+      <w>30</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>400</x>
+      <y>390</y>
+      <w>70</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>150</x>
+      <y>250</y>
+      <w>140</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>bg=yellow
+Le classement général est calculé à la demande</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>60</x>
+      <y>750</y>
+      <w>170</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>bg=yellow
+le booleen constructeur différencie les équipes officielles des autres</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>20</x>
+      <y>20</y>
+      <w>250</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>bg=yellow
+REMARQUES :
+Dans ce tp nous faisons abstraction des getter/setter.
+Seuls les getter/setter necessaires sont écrits.
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
