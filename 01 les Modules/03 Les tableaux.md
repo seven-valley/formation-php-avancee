@@ -35,13 +35,13 @@ $tab3[1] = 'poire';
 $tab3[2] = 'cerise';
 var_dump($tab3);
 ```
-### très utilisé ds symfony
+### très utilisé dans symfony
 ```php
 $tab4 = [0 =>'pomme',1=>'poire',2=>'cerise'];
 var_dump($tab4);
 ```
 
-## je parcours, j'affiche un tableau un tableau
+## je parcours, j'affiche un tableau 
 
 ### la boucle for à papa
 ```php
@@ -98,7 +98,7 @@ var_dump($tab3);
 | 1 | cerise |
 
   
-***realocation des indices !!!***
+***réalocation des indices !!!***
 
 
 # Comment construire un tableau 2D ?
