@@ -2,10 +2,11 @@
 
 ## La composition
 
-La relation de composition modélise une relation d’inclusion entre les instances de deux classes.
+La relation de composition modélise une relation d’inclusion entre les instances de deux classes.  
+  
 Une cheval ne peut pas "fonctionner" sans tête
 
-<img src="../img/association/01-composition.png" width="300">
+<img src="../img/association/01-composition.png" width="400">
 
 ## L'agrégation
 Une agrégation est un type spécial d'association dans laquelle les objets sont assemblés ou configurés ensemble pour créer un objet plus complexe. Une agrégation décrit un groupe d'objets et comment vous interagissez avec eux.
