@@ -30,6 +30,6 @@ On peut dire que une classe possède un ou des objets.
 <img src="../img/association/05-card.png" width="400">
 L'attribut <code>categorie</code> apparait sur la flèche.
      
-il n'apparait pas dans la liste des attributs.    
+Il n'apparait pas dans la liste des attributs.  
 Il est possible d'ecrire les cardinalités.    
 En fonction des cardinalité on saura si c'est un objet ou un tableau d'objet.
