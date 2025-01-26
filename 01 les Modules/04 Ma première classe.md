@@ -1,4 +1,14 @@
 # 04 - Ma première classe
+
+Présentation de UMLET
+
+diagramme uml de personne
+
+<code>+</code> public  
+<code>-</code> public  
+<code>#</code> protected  
+
+le contructuer :
 ```php
 <?php
 namespace Classes;
@@ -13,7 +23,7 @@ class Personne{
 }
 ```
 
-Mise en place de plusieurs constructeurs
+
 avec <code>?</code>
 ```php
 <?php
@@ -27,16 +37,16 @@ class Personne{
             $this->nom=$nom;
             $this->prenom=$prenom;
     }
-    public function getNom ():?Float{
+    public function getNom ():?String{
         return $this->nom;
     }    
-    public function setNom (Float $nom):void{
+    public function setNom (String $nom):void{
         $this->nom=$nom;
     } 
-        public function getPrenom ():?Float{
+        public function getPrenom ():?String{
         return $this->prenom;
     }    
-    public function setPrenom (Float $prenom):void{
+    public function setPrenom (String $prenom):void{
         $this->prenom=$prenom;
     } 
 }
@@ -58,16 +68,16 @@ class Personne{
             $this->nom=$nom;
             $this->prenom=$prenom;
     }
-    public function getNom ():?Float{
+    public function getNom ():?String{
         return $this->nom;
     }    
-    public function setNom (Float $nom):void{
+    public function setNom (String $nom):void{
         $this->nom=$nom;
     } 
-        public function getPrenom ():?Float{
+        public function getPrenom ():?String{
         return $this->prenom;
     }    
-    public function setPrenom (Float $prenom):void{
+    public function setPrenom (String $prenom):void{
         $this->prenom=$prenom;
     } 
     public function getFullname():String{
@@ -76,4 +86,25 @@ class Personne{
 }
 
 
+```
+
+Mise en place de plusieurs constructeurs
+```php
+public function __construct(?String $nom='',?String $prenom=''){
+            $this->nom=$nom;
+            $this->prenom=$prenom;
+    }
+```
+
+**Je teste**
+```php
+<?php	
+require_once('./config/config.php');
+var_dump(VENDOR_ROOT);
+require_once(VENDOR_ROOT.'/autoload.php');
+
+use Classes\Personne;
+ $personne = new Personne('DOE','John');
+ var_dump($personne);
+ $personne = new Personne('DOE 2');
 ```
