@@ -1,4 +1,4 @@
-# ma prmière classe
+# 04 - Ma première classe
 ```php
 <?php
 namespace Classes;
