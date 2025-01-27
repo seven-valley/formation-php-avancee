@@ -1,6 +1,8 @@
 # TP 02 - les tableaux
 <img src="../../img/08-tableau.png" width="300">
+
 Question 1
+
 ```php
 <?php
             $tableau = [
