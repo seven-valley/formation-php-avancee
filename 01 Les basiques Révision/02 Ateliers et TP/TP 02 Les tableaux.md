@@ -4,7 +4,7 @@ Doc php **array** les tableaux
 https://www.php.net/manual/en/ref.array.php
 
 ## Excercice 1
-![tableau](../../08-tableau.png)
+![tableau](../../img/08-tableau.png)
 Créer ce tableau 2 dimenssions   
 et l'afficher avec un boucle foreach  en HTML
 
