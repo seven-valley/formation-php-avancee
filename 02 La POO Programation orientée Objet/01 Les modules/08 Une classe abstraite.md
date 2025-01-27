@@ -28,7 +28,7 @@ $forme1 = new Forme(1,1);
 ```
 
 # Une méthode abstraite
-<img src="../../img/06/absctract3.png" width="800">
+<img src="../../img/06/abstract2.png" width="800">
 
 Une méthode abstraite c'est **un contrat**
 que l'on lance à la classe enfant : Obligation d'avoir cette méthode
