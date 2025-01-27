@@ -31,7 +31,7 @@ Version UML avec les attributs :
 
 Version complète UML :
   
-<img src="../../img/personne3.png" width="200">
+<img src="../../img/personne3.png" width="400">
 
 le contructeur :
 ```php
