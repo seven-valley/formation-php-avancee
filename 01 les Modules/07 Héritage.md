@@ -6,7 +6,8 @@ Le mot héritage est souvent utilisé dans un cadre de sucession ou de génétiq
 Pour les néophytes, définissons ce qu'est l'héritage en POO (Programmation orientée objet) :  
   
 Pour faire simple, c'est un mécanisme qui va permetttre, comme son nom l'indique, de transmettre toutes les méthodes et les attributs d'une classe dite "mère" vers une autre dite "fille" et ainsi de suite.  
-  
+
+----------
   
 :warning: Pour solutionner une problèmatique.  
 La code de la fonction <code>seDeplacer()</code> se trouve identique dans 2 classes.  
@@ -21,7 +22,7 @@ avec les attribute x et y
 et la méthode se déplacer
 
 <img src="../img/05/rectangle-2.png" width="800">
-![alt text](image.png)
+
 
 # Forme.php
 ```php
@@ -51,6 +52,8 @@ class Forme{
     } 
 }
 ```
+
+<code> parent::__construct($x,$y);</code> On appelle le constructeur de la classe mère
 
 # Rectangle.php
 ```php

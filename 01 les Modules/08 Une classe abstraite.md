@@ -11,6 +11,9 @@ Il n'est pas possible d'instancier une classe abstraite.
 Nous décidons de mettre Forme en classe abstraite.  
 Il n'est plus possible de créer des objets de type <code>Forme</code>
 Il n'est possible d'utiliser Forme que par héritage.
+
+<img src="../img/06/absctract.png" width="800">
+
 # Forme.php
 ```php
 <?php
@@ -22,4 +25,37 @@ abstract class Forme{
 
 ```php
 $forme1 = new Forme(1,1);
+```
+
+# Une méthode abstraite
+<img src="../img/06/absctract2.png" width="800">
+Une méthode abstraite c'est **un contrat**
+que l'on lance à la classe enfant : Obligation d'avoir cette méthode
+```php
+<?php
+namespace Classes;
+
+abstract class Forme{
+    protected ?Float $x =null;
+    protected ?Float $y=null;
+    
+    public function __construct(?Float $x,?Float $y){
+            $this->x=$x;
+            $this->y=$y;
+    }
+    abstract protected function superficie():Float;
+    public function getX ():?Float{
+        return $this->x;
+    }    
+    public function setX (Float $x):void{
+        $this->x=$x;
+    } 
+     public function getY ():?Float{
+        return $this->y;
+    }    
+    public function setY (Float $y):void{
+        $this->y=$y;
+    } 
+}
+
 ```
