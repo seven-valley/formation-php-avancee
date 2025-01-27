@@ -126,12 +126,9 @@ public function __construct(?String $nom='',?String $prenom=''){
 **Je teste**
 ```php
 <?php	
-require_once('./config/config.php');
-require_once(VENDOR_ROOT.'/autoload.php');
 
-use Classes\Personne;
+require_once(VENDOR_ROOT.'Personne.php');
  $personne = new Personne('DOE','John');
- var_dump($personne);
  $personne = new Personne('DOE 2');
 ```
 
