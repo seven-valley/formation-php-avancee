@@ -1,5 +1,5 @@
 # TP Team builder
-<img src="./teambuilder.png" width="200">
+<img src="./teambuilder.png" width="600">
 
 Compléter le modèle uml :
 - ajouter le constructeur
