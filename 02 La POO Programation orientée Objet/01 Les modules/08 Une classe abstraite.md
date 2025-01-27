@@ -12,7 +12,7 @@ Nous décidons de mettre Forme en classe abstraite.
 Il n'est plus possible de créer des objets de type <code>Forme</code>
 Il n'est possible d'utiliser Forme que par héritage.
 
-<img src="../../img/06/abstract.png" width="800">
+<img src="../../img/06/abstract.png" width="400">
 
 # Forme.php
 ```php
