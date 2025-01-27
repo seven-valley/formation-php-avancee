@@ -1,5 +1,5 @@
 # 02 - Les sessions
-<img src="../../img/module-1/09-session.png" width="400">
+<img src="../../img/09-session.png" width="400">
 
 ## Comment utiliser les sessions en PHP ?   
 **demo :**

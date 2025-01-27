@@ -2,7 +2,7 @@
 
 
 ## La Méthode GET
-<img src="../../img/module-1/03-get.png" width="400">
+<img src="../../img/03-get.png" width="400">
 
 
 ### Utiliser La méthode GET pour envoyer des données
@@ -43,7 +43,7 @@ print_r($_GET);
 ```
 
 ## La Méthode POST
-<img src="../../img/module-1/04-post.png" width="400">
+<img src="../../img/04-post.png" width="400">
 
 
 ### Utiliser POST pour envoyer des données
