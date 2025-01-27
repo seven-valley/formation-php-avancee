@@ -1,4 +1,6 @@
+# TP 1 Correction
 
+<img src="../../img/tp1-imc.webp" width="600"></a>
 
 ## correction v1
 ```php
