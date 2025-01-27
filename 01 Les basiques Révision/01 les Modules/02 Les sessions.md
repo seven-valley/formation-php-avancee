@@ -1,5 +1,5 @@
 # 02 - Les sessions
-<img src="../img/module-1/09-session.png" width="400">
+<img src="../../img/module-1/09-session.png" width="400">
 
 ## Comment utiliser les sessions en PHP ?   
 **demo :**
@@ -37,7 +37,7 @@ if (isset($_POST["nom_film"]) && isset($_POST["annee"])){
 
 ```
 ### ETAPE 2 J'affiche les données en session
-<img src="../img/module-1/09b-session.png" width="400">
+<img src="../../img/module-1/09b-session.png" width="400">
 
 **page-a.php**  
   
