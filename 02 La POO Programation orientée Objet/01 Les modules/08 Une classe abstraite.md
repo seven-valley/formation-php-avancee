@@ -12,7 +12,7 @@ Nous décidons de mettre Forme en classe abstraite.
 Il n'est plus possible de créer des objets de type <code>Forme</code>
 Il n'est possible d'utiliser Forme que par héritage.
 
-<img src="../../img/06/absctract.png" width="800">
+<img src="../../img/06/abstract.png" width="800">
 
 # Forme.php
 ```php
@@ -29,8 +29,10 @@ $forme1 = new Forme(1,1);
 
 # Une méthode abstraite
 <img src="../../img/06/absctract2.png" width="800">
+
 Une méthode abstraite c'est **un contrat**
 que l'on lance à la classe enfant : Obligation d'avoir cette méthode
+
 ```php
 <?php
 namespace Classes;
