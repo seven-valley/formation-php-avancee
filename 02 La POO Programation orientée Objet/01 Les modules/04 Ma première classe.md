@@ -18,16 +18,19 @@ https://www.umlet.com/
 Diagramme UML de personne
 
 Version UML simplifiée :
+  
 <img src="../../img/personne.png" width="200">
 
-Version UML avec les attributs
-<img src="../../img/personne.png" width="200">
+Version UML avec les attributs :
+  
+<img src="../../img/personne2.png" width="200">
 
 <code>+</code> public  
 <code>-</code> private  
 <code>#</code> protected  
 
 Version complète UML :
+  
 <img src="../../img/personne3.png" width="200">
 
 le contructeur :
