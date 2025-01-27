@@ -1,4 +1,6 @@
 # TP Team builder
+<img src="./teambuilder.png" width="200">
+
 Compléter le modèle uml :
 - ajouter le constructeur
 - ajouter les méthodes
