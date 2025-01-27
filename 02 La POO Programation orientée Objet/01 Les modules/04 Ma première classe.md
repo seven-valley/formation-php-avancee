@@ -1,23 +1,36 @@
 # 04 - Ma première classe
 
-# un objet sans Classe !
+## un objet sans Classe !
 Le PHP étant un language _"permissif"_   
 tout est possible ...  
 
 Oui c'est possible avec <code>stdClass</code>  
-Le cast est possible aussi !
+```php
+$presonne = new stdClass();
+$personne->prenom="Brad";
+$personne->nom="PITT";
+```
 
+## Présentation de UMLET
+https://www.umlet.com/
 
+## Création d'une classe
+Diagramme UML de personne
 
-Présentation de UMLET
+Version UML simplifiée :
+<img src="../../img/personne.png" width="200">
 
-diagramme uml de personne
+Version UML avec les attributs
+<img src="../../img/personne.png" width="200">
 
 <code>+</code> public  
-<code>-</code> public  
+<code>-</code> private  
 <code>#</code> protected  
 
-le contructuer :
+Version complète UML :
+<img src="../../img/personne3.png" width="200">
+
+le contructeur :
 ```php
 <?php
 namespace Classes;
