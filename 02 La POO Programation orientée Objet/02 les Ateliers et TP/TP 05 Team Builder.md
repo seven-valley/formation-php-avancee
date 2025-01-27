@@ -1,7 +1,7 @@
 # TP Team builder
 <img src="./teambuilder.png" width="600">
 
-Compléter le modèle uml :
+Compléter le modèle UML :
 - ajouter le constructeur
 - ajouter les méthodes
 Créer les Classes Equipe et Personne

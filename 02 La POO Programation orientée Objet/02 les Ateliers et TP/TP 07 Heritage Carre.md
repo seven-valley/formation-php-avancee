@@ -1,4 +1,6 @@
-# TP 01 créer la classe Rectangle
+# TP 07 créer la classe Carre
 
-![alt text](../../img/tp/tp1.png)
+<img src="./forme.png" width="600">
 
+- Mettre en place l'héritage sur Cercle
+- créer la classe Carre
